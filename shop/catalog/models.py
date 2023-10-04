@@ -1,4 +1,5 @@
 from django.db import models
+from users.models import CustomUser
 
 
 class Category(models.Model):
@@ -54,3 +55,9 @@ class Product(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class Basket(models.Model):
+    user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
+    count = models.IntegerField(null=True, blank=True)
