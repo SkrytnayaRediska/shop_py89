@@ -1,0 +1,19 @@
+[{
+    "model": "catalog.seller",
+    "pk": 1,
+    "fields": {
+        "name": "Seller 1",
+        "country": "Belarus",
+        "description": "jbdkfglbmdfklgbmdfgklbnmfdklgb"
+    }
+},
+{
+    "model": "catalog.seller",
+    "pk": 2,
+    "fields": {
+        "name": "Seller 2",
+        "country": "Kazakhstan",
+        "description": "jnfldvlsdfnvksejgkejspe"
+    }
+}
+]
