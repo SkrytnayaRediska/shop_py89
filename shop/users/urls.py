@@ -6,5 +6,5 @@ urlpatterns = [
     path('auth/', include('djoser.urls.jwt')),
     path('accounts/activate/<uid>/<token>/',
          ActivateUser.as_view({'get': 'activation'}), name='activation'),
-    path('some-view/', SomeView.as_view())
+    path('some-view/', SomeView.as_view(), name='some-view')
 ]
