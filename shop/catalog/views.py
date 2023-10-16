@@ -7,6 +7,7 @@ from catalog.serializers import CategorySerializer, ProductSerializer, \
     DiscountSerializer, SellerSerializer, AddProductSerializer, BasketSerializer, \
     DeleteProductSerializer, OrderSerializer
 from django.db.models import F
+from catalog.tasks import some_task
 
 
 class CategoriesListView(ListAPIView):
@@ -20,6 +21,7 @@ class CategoryProductsView(APIView):
 
     def get(self, request, category_id):
         queryset = Product.objects.filter(category__id=category_id)
+        some_task.delay()
         serializer = ProductSerializer(queryset, many=True)
         return Response(serializer.data)
 
