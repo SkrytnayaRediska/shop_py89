@@ -183,3 +183,5 @@ SWAGGER_SETTINGS = {
         }
     }
 }
+
+TELEGRAM_API_KEY = env('TELEGRAM_API_KEY')
