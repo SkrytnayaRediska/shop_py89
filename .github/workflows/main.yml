@@ -29,6 +29,10 @@ jobs:
         run: |
           docker-compose -f shop/docker-compose.yml up -d db
 
+      - name: Run redis
+        run: |
+          docker-compose -f shop/docker-compose.yml up -d redis
+
       - name: Install Dependecies
         run: |
           python -m pip install --upgrade pip
