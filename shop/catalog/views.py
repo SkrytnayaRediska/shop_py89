@@ -22,7 +22,6 @@ class CategoryProductsView(APIView):
 
     def get(self, request, category_id):
         queryset = Product.objects.filter(category__id=category_id)
-        some_task.delay()
         serializer = ProductSerializer(queryset, many=True)
         return Response(serializer.data)
 
@@ -42,6 +41,7 @@ class DiscountProductsView(APIView):
         else:
             queryset = Product.objects.filter(discount__id=discount_id)
         serializer = ProductSerializer(queryset, many=True)
+        print('test')
         return Response(serializer.data)
 
 
