@@ -42,6 +42,7 @@ class DiscountProductsView(APIView):
         else:
             queryset = Product.objects.filter(discount__id=discount_id)
         serializer = ProductSerializer(queryset, many=True)
+        print('test')
         return Response(serializer.data)
 
 
