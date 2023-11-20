@@ -12,6 +12,9 @@ pyflakes:
   disable:
     - F401
 
+pycodestyle:
+  max-line-length: 200  # увеличиваем допустимую длину строки, если нужно
+
 ignore-paths:
   - venv
 
