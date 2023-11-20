@@ -40,5 +40,5 @@ jobs:
 
       - name: Run Tests
         run: |
-          cd project
+          cd shop
           pytest
